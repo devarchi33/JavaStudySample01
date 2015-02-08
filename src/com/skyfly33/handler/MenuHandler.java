@@ -39,7 +39,7 @@ public class MenuHandler {
 		return false;
 	}
 
-	public int subMenuHandler(int mainChoiceNum, int subChoiceNum,
+	public boolean subMenuHandler(int mainChoiceNum, int subChoiceNum,
 			boolean qa) {
 		while (qa) {
 			switch (subChoiceNum) {
@@ -52,9 +52,11 @@ public class MenuHandler {
 					qa = menu.shapeAddMenu(mainChoiceNum);
 				break;
 			case 2: // 조회하기
-				qa = menu.shapeSearchAll(mainChoiceNum);
+				qa = menu.shapeSearchAllMenu(mainChoiceNum);
 				break;
 			case 3: // 넓이 구하기
+				qa = menu.shapeGetExtentMenu(mainChoiceNum);
+				break;
 			case 4: // 메인메뉴로 돌아가기
 				mainMenuHandler();
 				break;
@@ -62,6 +64,10 @@ public class MenuHandler {
 				System.out.println("프로그램을 종료 하겠습니다.");
 				System.out.println("이용해 주셔서 감사합니다.");
 				System.exit(0);
+			default:
+				System.out.println("@@@@@@@@@@@ 잘못 입력 하셨습니다. @@@@@@@@@@@");
+				System.out.println();
+				return mainMenuHandler();	
 			}
 		}
 		subChoiceNum = menu.subMenu(runSub);
