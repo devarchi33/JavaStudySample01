@@ -5,15 +5,27 @@ public abstract class Shape {
 	double base = 0;
 	double high = 0;
 	double radius = 0;
+	int type; //1: 원 2: 삼각형 3: 사각형
 
 	String info;
 
 	public Shape() {
 	}
-
+	
 	public Shape(double base, double high) {
 		this.base = base;
 		this.radius = high;
+	}
+
+	public Shape(double base, double high, int type) {
+		this.base = base;
+		this.radius = high;
+		this.type = type;
+	}
+	
+	public Shape(double radius, int type) {
+		this.radius = radius;
+		this.type = type;
 	}
 
 	public Shape(double radius) {

@@ -39,17 +39,17 @@ public class MenuHandler {
 		return false;
 	}
 
-	public boolean subMenuHandler(int mainChoiceNum, int subChoiceNum,
+	public int subMenuHandler(int mainChoiceNum, int subChoiceNum,
 			boolean qa) {
 		while (qa) {
 			switch (subChoiceNum) {
 			case 1: // 입력하기
 				if (mainChoiceNum == 1)
-					qa = menu.circleAddMenu();
+					qa = menu.shapeAddMenu(mainChoiceNum);
 				else if (mainChoiceNum == 2)
-					qa = menu.triAddmenu();
+					qa = menu.shapeAddMenu(mainChoiceNum);
 				else if (mainChoiceNum == 3)
-					qa = menu.rectanAddmenu();
+					qa = menu.shapeAddMenu(mainChoiceNum);
 				break;
 			case 2: // 조회하기
 			case 3: // 넓이 구하기
@@ -63,6 +63,8 @@ public class MenuHandler {
 			}
 		}
 		subChoiceNum = menu.subMenu(runSub);
+		
+		//continueQuestion이후 subMenu로 돌아가기 위한 재귀호출.
 		return subMenuHandler(mainChoiceNum, subChoiceNum, true);
 	}
 }

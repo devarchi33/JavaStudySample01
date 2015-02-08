@@ -7,6 +7,10 @@ public class Circle extends Shape {
 	public Circle(double radius) {
 		super(radius);
 	}
+	
+	public Circle(double radius, int type) {
+		super(radius, type);
+	}
 
 	@Override
 	public double getExtent() {
