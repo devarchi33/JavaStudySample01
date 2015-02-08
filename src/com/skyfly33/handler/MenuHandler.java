@@ -52,6 +52,8 @@ public class MenuHandler {
 					qa = menu.shapeAddMenu(mainChoiceNum);
 				break;
 			case 2: // 조회하기
+				qa = menu.shapeSearchAll(mainChoiceNum);
+				break;
 			case 3: // 넓이 구하기
 			case 4: // 메인메뉴로 돌아가기
 				mainMenuHandler();

@@ -51,7 +51,7 @@ public class Menu {
 		while (runSub) {
 			System.out.println("########## Sub Menu(기능 고르기) ##########");
 			System.out.println("1. 입력하기");
-			System.out.println("2. 조회하기");
+			System.out.println("2. 전체 조회하기");
 			System.out.println("3. 넓이 구하기");
 			System.out.println("4. 메인으로");
 			System.out.println("5. 종료하기");
@@ -128,17 +128,19 @@ public class Menu {
 			int high = 0;
 			
 			switch(type){
-			case 1:
+			case 1: //원
 				System.out.println("반지름을 입력 하세요 : ");
 				radius = io.input();
+				
 				sCircle = new Circle(radius);
 				sList.add(sCircle);
 
 				System.out.println("반지름 : " + radius + "의 원이 성공적으로 입력 되었습니다.");
 				System.out.println();
+				System.out.println();
 				qa = continueQuetion();
 				return qa;
-			case 2:
+			case 2: //삼각형
 				System.out.println("밑변을 입력 하세요 : ");
 				base = io.input();
 				System.out.println("높이를 입력 하세요 : ");
@@ -150,9 +152,10 @@ public class Menu {
 				System.out.println("밑변 : " + base + ", 높이 : " + high
 						+ "의 삼각형이 성공적으로 입력 되었습니다.");
 				System.out.println();
+				System.out.println();
 				qa = continueQuetion();
 				return qa;
-			case 3:
+			case 3: //사각형
 				System.out.println("밑변을 입력 하세요 : ");
 				base = io.input();
 				System.out.println("높이를 입력 하세요 : ");
@@ -163,6 +166,7 @@ public class Menu {
 
 				System.out.println("밑변 : " + base + ", 높이 : " + high
 						+ "의 사각형이 성공적으로 입력 되었습니다.");
+				System.out.println();
 				System.out.println();
 				qa = continueQuetion();
 				return qa;
@@ -175,6 +179,16 @@ public class Menu {
 		}
 	}
 	
+	public boolean shapeSearchAll(int shape){
+		for(int i =0; i<sList.size(); i++){
+			System.out.println("Index["+i+"] : " +sList.get(i).getShapeInfo(shape));
+		}
+		
+		System.out.println();
+		System.out.println();
+		return qa = continueQuetion();
+	}
+	
 	public void bufferInput() {
 		bufferInput = io.input();
 		System.out.println(bufferInput + "번 메뉴를 선택 하셨습니다.");
@@ -184,7 +198,7 @@ public class Menu {
 
 	public boolean continueQuetion() {
 		try {
-			System.out.println("계속 입력하시겠습니까? <1: 계속입력(default) 2: 상위 메뉴>");
+			System.out.println("계속 하시겠습니까? <1: 계속(default) 2: 상위 메뉴>");
 
 			String input = Integer.toString(io.input());
 
