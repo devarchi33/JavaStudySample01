@@ -2,7 +2,7 @@ package com.skyfly33.shape;
 
 public class Circle extends Shape {
 
-	double pi = Math.PI;
+	private double pi = Math.PI;
 
 	public Circle(double radius) {
 		super(radius);

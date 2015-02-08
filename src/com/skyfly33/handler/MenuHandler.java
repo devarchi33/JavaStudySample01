@@ -45,12 +45,7 @@ public class MenuHandler {
 		while (qa) {
 			switch (subChoiceNum) {
 			case 1: // 입력하기
-				if (mainChoiceNum == 1)
-					qa = menu.shapeAddMenu(mainChoiceNum);
-				else if (mainChoiceNum == 2)
-					qa = menu.shapeAddMenu(mainChoiceNum);
-				else if (mainChoiceNum == 3)
-					qa = menu.shapeAddMenu(mainChoiceNum);
+				qa = menu.shapeAddMenu(mainChoiceNum);
 				break;
 			case 2: // 조회하기
 				qa = menu.shapeSearchAllMenu(mainChoiceNum);

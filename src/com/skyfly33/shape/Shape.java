@@ -37,6 +37,30 @@ public abstract class Shape {
 		}
 		return info;
 
+	}	
+
+	public double getBase() {
+		return base;
+	}
+
+	public double getHigh() {
+		return high;
+	}
+
+	public double getRadius() {
+		return radius;
+	}
+
+	public void setBase(double base) {
+		this.base = base;
+	}
+
+	public void setHigh(double high) {
+		this.high = high;
+	}
+
+	public void setRadius(double radius) {
+		this.radius = radius;
 	}
 
 	public abstract double getExtent();
