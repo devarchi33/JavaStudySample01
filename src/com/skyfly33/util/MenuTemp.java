@@ -21,11 +21,11 @@ public class MenuTemp {
 
 	// 도형 정보 저장을 위한 변수들.
 	String baseInput;
-	double base;
+	int base;
 	String highInput;
-	double high;
+	int high;
 	String radiusInput;
-	double radius;
+	int radius;
 
 	// 도형객체와 도형객체를 담을 자료구조들.
 	List<Circle> circles = new ArrayList<Circle>();;
@@ -99,11 +99,11 @@ public class MenuTemp {
 			try {
 				System.out.println("밑변을 입력하세요.");
 				baseInput = br.readLine();
-				base = Double.parseDouble(baseInput);
+//				base = Double.parseDouble(baseInput);
 
 				System.out.println("높이를 입력하세요.");
 				highInput = br.readLine();
-				high = Double.parseDouble(highInput);
+//				high = Double.parseDouble(highInput);
 
 				System.out.println("밑변 : " + base + ", 높이 : " + high + "의 "
 						+ shape + "각형이 입력 되었습니다.");
@@ -125,7 +125,7 @@ public class MenuTemp {
 			try {
 				System.out.println("반지름을 입력하세요.");
 				radiusInput = br.readLine();
-				radius = Double.parseDouble(radiusInput);
+//				radius = Double.parseDouble(radiusInput);
 
 				System.out.println("반지름 : " + radius + "의 " + shape
 						+ "형이 입력 되었습니다.");

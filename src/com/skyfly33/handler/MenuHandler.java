@@ -33,6 +33,7 @@ public class MenuHandler {
 		default:
 			System.out.println("@@@@@@@@@@@ 잘못 입력 하셨습니다. @@@@@@@@@@@");
 			System.out.println();
+			System.out.println();
 			return mainMenuHandler();
 		}
 
@@ -66,6 +67,7 @@ public class MenuHandler {
 				System.exit(0);
 			default:
 				System.out.println("@@@@@@@@@@@ 잘못 입력 하셨습니다. @@@@@@@@@@@");
+				System.out.println();
 				System.out.println();
 				return mainMenuHandler();	
 			}
