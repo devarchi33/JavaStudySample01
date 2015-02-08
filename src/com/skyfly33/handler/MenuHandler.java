@@ -54,6 +54,8 @@ public class MenuHandler {
 			case 2: // 조회하기
 			case 3: // 넓이 구하기
 			case 4: // 메인메뉴로 돌아가기
+				mainMenuHandler();
+				break;
 			case 5: // 종료하기
 				System.out.println("프로그램을 종료 하겠습니다.");
 				System.out.println("이용해 주셔서 감사합니다.");
